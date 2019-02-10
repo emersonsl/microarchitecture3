@@ -1,0 +1,9 @@
+	component processor is
+		port (
+			clk_clk                                            : in  std_logic                     := 'X'; -- clk
+			my_register_slave_interface_0_conduit_end_readdata : out std_logic_vector(31 downto 0);        -- readdata
+			uart_0_rxd                                         : in  std_logic                     := 'X'; -- rxd
+			uart_0_txd                                         : out std_logic                             -- txd
+		);
+	end component processor;
+

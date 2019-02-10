@@ -1,0 +1,165 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[8]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[9]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[10]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[11]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[12]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[13]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[14]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[15]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[16]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[17]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[18]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[19]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[20]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[21]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[22]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[23]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[24]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[25]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[26]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[27]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[28]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[29]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[30]",
+					"strict" : false
+				},
+				{
+					"name" : "my_register_slave_interface_0_conduit_end_readdata[31]",
+					"strict" : false
+				},
+				{
+					"name" : "uart_0_txd",
+					"strict" : false
+				},
+				{
+					"name" : "clk_clk",
+					"strict" : false
+				},
+				{
+					"name" : "uart_0_rxd",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
