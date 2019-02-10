@@ -5,20 +5,21 @@ module arbitrator( clock, resetn, writedata, readdata, read, write, chip_select,
  input rx;
  output tx;
 
+/*estados*/
  parameter SEND_STATE	= 3'b000;
  parameter RECEIVE_DATA_STATE	= 3'b001;
  parameter RECEIVE_CRC_STATE	= 3'b010;
  parameter CHECK_CRC_STATE	= 3'b011;
  parameter RECOVERY_STATE	= 3'b100;
 
- reg [15:0] temp;
+ reg [15:0] temp; //guarda o que foi recebido antes de verificar o CRC
  reg [2:0] state = SEND_STATE;
- reg [2:0] select_sensor = 3'b1;
- reg [7:0] receive_reg, send_reg;
- wire rdy_clr = 0;
- wire rdy;
- wire wr_en;
- wire ck_crc, ck_alarme;
+ reg [2:0] select_sensor = 3'b1; //contador que seleciona o sensor
+ reg [7:0] receive_reg, send_reg; //registradores para envio e recebimento da uart
+ wire rdy_clr = 0; 
+ wire rdy; //controle de leitura na uart
+ wire wr_en; // controle da escrita na uart
+ wire ck_crc, ck_alarme; //controle crc
  wire tx_busy;
 
  uart uart_instance(.din(send_reg), .wr_en(wr_en), .clk_50m(clk), .tx(tx), .tx_busy(tx_busy), .rx(rx), .rdy(rdy), .rdy_clr(rdy_clr), .dout(receive_reg));
@@ -26,8 +27,8 @@ module arbitrator( clock, resetn, writedata, readdata, read, write, chip_select,
  assign wr_en = (state == SEND_STATE);
 
 always@(posedge clock or negedge resetn)
- if (~resetn)
-  state <= SEND_STATE;
+ if (~resetn) //reset da maquina
+  state <= SEND_STATE; 
  else
  begin
  	case (state)
@@ -35,23 +36,23 @@ always@(posedge clock or negedge resetn)
 			state <= RECEIVE_DATA_STATE;
 			send_reg[2:0] <= select_sensor[2:0];	
 			select_sensor <= select_sensor + 3'b1;
-			if (select_sensor == 6) begin
+			if (select_sensor == 6) begin //contagem exceda 5
 				select_sensor <= 3'b1;
 			end
 		end
 		RECEIVE_DATA_STATE: bengin
-			if(rdy) begin
+			if(rdy) begin //leitura concluida
 				temp[7:0] <= receive_reg[7:0];
 				rdy_clr <= 1'b1;
 				state <= RECEIVE_CRC_STATE;
 			end
-			else bengin
+			else bengin 
 				//time out
 			end
 		end
 		RECEIVE_CRC_STATE: begin
 			rdy_clr <= 0;
-			if(rdy) begin
+			if(rdy) begin //leitura concluida
 				temp[15:8] <= receive_reg[7:0];
 				rdy_clr <= 1'b1;
 				state <= CHECK_CRC_STATE;
@@ -62,11 +63,11 @@ always@(posedge clock or negedge resetn)
 		end
 		CHECK_CRC_STATE: begin
 			rdy_clr <= 0;
-			if(ck_alarme) begin
+			if(ck_alarme) begin //verifica ser foi o alarme
 				state <= RECOVERY_STATE;
 			end
 			else begin
-				if(ck_crc) begin
+				if(ck_crc) begin //crc está correto
 					readdata[15:0] <= temp[15:0];
 					readdata[23:16] <= send_data[7:0];
 					state <= SEND_STATE; 

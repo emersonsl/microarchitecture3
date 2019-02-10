@@ -1,0 +1,15 @@
+Enviar
+	alterna entre os sensores
+Receber
+	se estourar o tempo, volta para enviar
+	se receber o dado, vai para receber CRC
+ReceberCRC
+	se estourar o tempo, volta para enviar
+	se receber o dado, vai para verificar CRC
+verificarCRC
+	se identificar msg do alarme, vai para recuperação
+	se crc falhar, retorna para receber: assim confirma se foi o 				alarme ou falha de transmissão
+	se crc ok, vai para enviar
+Recuperação
+	envia mensagem para o alarme parar
+	volta para o estado enviar
