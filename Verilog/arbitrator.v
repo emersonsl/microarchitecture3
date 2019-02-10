@@ -24,6 +24,9 @@ module arbitrator( clock, resetn, writedata, readdata, read, write, chip_select,
 
  uart uart_instance(.din(send_reg), .wr_en(wr_en), .clk_50m(clk), .tx(tx), .tx_busy(tx_busy), .rx(rx), .rdy(rdy), .rdy_clr(rdy_clr), .dout(receive_reg));
 
+ check_CRC check_CRC_instance(.ck_crc(ck_crc), .ck_alarme(ck_alarme), .d(temp[7:0]), .crc(temp[15:8]));
+
+
  assign wr_en = (state == SEND_STATE);
 
 always@(posedge clock or negedge resetn)
