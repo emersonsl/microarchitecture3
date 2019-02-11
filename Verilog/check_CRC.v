@@ -1,6 +1,6 @@
 module check_CRC(output ck_crc, output ck_alarme, input wire [7:0] d, input wire [7:0] crc);
     wire [7:0] c;
-    output [5:0] newcrc;
+    wire [5:0] newcrc;
 
     assign c = 8'b00110111;
 

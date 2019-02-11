@@ -15,21 +15,23 @@ module arbitrator( clock, resetn, writedata, readdata, read, write, chip_select,
  reg [15:0] temp; //guarda o que foi recebido antes de verificar o CRC
  reg [2:0] state = SEND_STATE;
  reg [2:0] select_sensor = 3'b1; //contador que seleciona o sensor
- reg [7:0] receive_reg, send_reg; //registradores para envio e recebimento da uart
- wire rdy_clr = 0; 
+ reg [7:0] send_reg; //registradores para envio e recebimento da uart
+ wire [7:0] receive_reg;
+ reg [31:0] readd;
+ reg rdy_clr; 
  wire rdy; //controle de leitura na uart
  wire wr_en; // controle da escrita na uart
  wire ck_crc, ck_alarme; //controle crc
  wire tx_busy;
 
- uart uart_instance(.din(send_reg), .wr_en(wr_en), .clk_50m(clk), .tx(tx), .tx_busy(tx_busy), .rx(rx), .rdy(rdy), .rdy_clr(rdy_clr), .dout(receive_reg));
+ uart uart_instance(.din(send_reg), .wr_en(wr_en), .clk_50m(clock), .tx(tx), .tx_busy(tx_busy), .rx(rx), .rdy(rdy), .rdy_clr(rdy_clr), .dout(receive_reg));
 
  check_CRC check_CRC_instance(.ck_crc(ck_crc), .ck_alarme(ck_alarme), .d(temp[7:0]), .crc(temp[15:8]));
 
 
  assign wr_en = (state == SEND_STATE);
 
-always@(posedge clock or negedge resetn)
+always@(posedge clock or negedge resetn) begin
  if (~resetn) //reset da maquina
   state <= SEND_STATE; 
  else
@@ -43,13 +45,13 @@ always@(posedge clock or negedge resetn)
 				select_sensor <= 3'b1;
 			end
 		end
-		RECEIVE_DATA_STATE: bengin
+		RECEIVE_DATA_STATE: begin
 			if(rdy) begin //leitura concluida
 				temp[7:0] <= receive_reg[7:0];
 				rdy_clr <= 1'b1;
 				state <= RECEIVE_CRC_STATE;
 			end
-			else bengin 
+			else begin 
 				//time out
 			end
 		end
@@ -71,8 +73,8 @@ always@(posedge clock or negedge resetn)
 			end
 			else begin
 				if(ck_crc) begin //crc está correto
-					readdata[15:0] <= temp[15:0];
-					readdata[23:16] <= send_data[7:0];
+					readd[15:0] <= temp[15:0];
+					readd[23:16] <= send_reg[7:0];
 					state <= SEND_STATE; 
 				end
 				else begin
@@ -85,5 +87,6 @@ always@(posedge clock or negedge resetn)
 			state <= SEND_STATE;
 		end
 	endcase
+  end
  end
 endmodule
