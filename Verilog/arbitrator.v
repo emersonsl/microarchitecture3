@@ -2,6 +2,7 @@ module arbitrator( clock, resetn, writedata, readdata, read, write, chip_select,
  input clock, resetn, read, write, chip_select;
  input [31:0] writedata;
  output [31:0] readdata;
+ output [2:0] state;
  input rx;
  output tx;
 
