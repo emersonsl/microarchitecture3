@@ -1,8 +1,7 @@
-module arbitrator( clock, resetn, writedata, readdata, read, write, chip_select, rx, tx);
+module arbitrator( clock, resetn, writedata, readdata, read, write, chip_select, rx, tx, state);
  input clock, resetn, read, write, chip_select;
  input [31:0] writedata;
  output [31:0] readdata;
- output [2:0] state;
  input rx;
  output tx;
 
@@ -14,7 +13,7 @@ module arbitrator( clock, resetn, writedata, readdata, read, write, chip_select,
  parameter RECOVERY_STATE	= 3'b100;
 
  reg [15:0] temp; //guarda o que foi recebido antes de verificar o CRC
- reg [2:0] state = SEND_STATE;
+ output reg [2:0] state = SEND_STATE;
  reg [2:0] select_sensor = 3'b1; //contador que seleciona o sensor
  reg [7:0] send_reg; //registradores para envio e recebimento da uart
  wire [7:0] receive_reg;
