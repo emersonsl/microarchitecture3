@@ -1,0 +1,30 @@
+'timescale 1ns/1ps
+module teste_CRC;
+
+reg [7:0] dado;
+reg [7:0] crc;
+
+wire ck_crc, ck_alarme;
+
+check_CRC testeCRC(ck_crc, ck_alarme, dado, crc);
+
+ initial // aqui o crc vai funcionar
+   begin
+    dado = 8'b00000000;
+    crc = 8'b00110111;
+    if(ck_alarme == 1) 
+	$display("Alarme OK");
+    else
+ 	$display("Erro no Alarme");
+ end
+ initial //aqui o crc vai dar erro 
+   begin
+    dado = 8'b00000000;
+    crc = 8'b00110110;
+    if(ck_alarme == 1) 
+	$display("Alarme OK");
+    else
+ 	$display("Erro no Alarme");
+ end
+ 
+

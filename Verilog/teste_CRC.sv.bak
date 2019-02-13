@@ -7,8 +7,8 @@ reg [2:0] count;
 
 wire ck_crc;
 wire ck_alarme;
-wire [7:0] newcrc;
-check_CRC testeCRC(ck_crc, ck_alarme, dado, crc, newcrc);
+
+check_CRC testeCRC(ck_crc, ck_alarme, dado, crc);
 initial begin
     dado = 8'b00000000;
     crc = 8'b00110111;
