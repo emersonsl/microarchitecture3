@@ -1,4 +1,4 @@
-module arbitrator( clock, resetn, writedata, readdata, read, write, chip_select, rx, tx, rdy, state);
+module arbitrator( clock, resetn, writedata, readdata, read, write, chip_select, rx, tx, state);
  input clock, resetn, read, write, chip_select;
  input [31:0] writedata;
  output [31:0] readdata;
@@ -18,7 +18,7 @@ module arbitrator( clock, resetn, writedata, readdata, read, write, chip_select,
  wire [7:0] receive_reg;
  reg [31:0] readd;
  reg rdy_clr; 
- input rdy; //controle de leitura na uart
+ wire rdy; //controle de leitura na uart
  wire wr_en; // controle da escrita na uart
  wire ck_crc, ck_alarme; //controle crc
  wire tx_busy;
