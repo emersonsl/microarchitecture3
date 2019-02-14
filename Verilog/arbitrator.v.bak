@@ -57,7 +57,7 @@ always@(posedge clock or negedge resetn) begin
 			end
 		end
 		RECEIVE_DATA_STATE: begin
-			if(rdy) begin //leitura concluida
+			if(1) begin //leitura concluida
 				time_out <= 5'b0; 
 				temp[7:0] <= receive_reg[7:0];
 				rdy_clr <= 1'b1;

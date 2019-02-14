@@ -22,7 +22,7 @@ module teste_arbitrator;
 		while(count < 2) begin
 			
 			#50
-			if(state == 000)begin clock = 0; rdy = 1; resetn=1; end
+			if(state == 000)begin clock = 0; rdy = 0; resetn=1; end
 			$display("Clock %b",clock);
 			$display("Ready %b", rdy);
 			$display("Reset %b", resetn);
