@@ -1,3 +1,4 @@
+/* codigo extraido do repositorio https://github.com/jamieiles/uart*/
 module receiver(input wire rx,
 		output reg rdy,
 		input wire rdy_clr,

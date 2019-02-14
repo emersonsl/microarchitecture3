@@ -1,3 +1,5 @@
+/* codigo extraido do repositorio https://github.com/jamieiles/uart*/
+
 /*
  * Hacky baud rate generator to divide a 50MHz clock into a 115200 baud
  * rx/tx pair where the rx clcken oversamples by 16x.

@@ -1,0 +1,161 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+varbitrator
+Z0 !s110 1550135521
+!i10b 1
+!s100 GlS;kgJ:j^[aIab0B=jcd1
+I6N0VOKg5cH?C_8_DFCehk3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/problema3/Verilog
+Z3 w1550096880
+8C:/problema3/Verilog/arbitrator.v
+FC:/problema3/Verilog/arbitrator.v
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1550135521.000000
+!s107 C:/problema3/Verilog/arbitrator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/problema3/Verilog/arbitrator.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vbaud_rate_gen
+R0
+!i10b 1
+!s100 `ThbS1S^g174`6`JPFC;S1
+IKU<LU=1URZAn4T0]21E`P0
+R1
+R2
+w1370367838
+8C:/problema3/Verilog/baud_rate_gen.v
+FC:/problema3/Verilog/baud_rate_gen.v
+L0 5
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/problema3/Verilog/baud_rate_gen.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/problema3/Verilog/baud_rate_gen.v|
+!i113 1
+R6
+R7
+vcheck_CRC
+Z8 !s110 1550135522
+!i10b 1
+!s100 D87jOnQdiS9n1fT]ACBb31
+I2ne[RXh0:[WRHVU0]oJ@i0
+R1
+R2
+R3
+8C:/problema3/Verilog/check_CRC.v
+FC:/problema3/Verilog/check_CRC.v
+L0 1
+R4
+r1
+!s85 0
+31
+Z9 !s108 1550135522.000000
+!s107 C:/problema3/Verilog/check_CRC.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/problema3/Verilog/check_CRC.v|
+!i113 1
+R6
+R7
+ncheck_@c@r@c
+vreceiver
+R8
+!i10b 1
+!s100 XK2E<PcO4cVPj12mKf=OY0
+I4ZD7SeFN5X9GRoFKzh:K?1
+R1
+R2
+w1549789592
+8C:/problema3/Verilog/receiver.v
+FC:/problema3/Verilog/receiver.v
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/problema3/Verilog/receiver.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/problema3/Verilog/receiver.v|
+!i113 1
+R6
+R7
+vteste_arbitrator
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R8
+!i10b 1
+!s100 n`bcO9fz5P2>>aH5Whc]a0
+I9@5Kd09b0PhNZ6dSNme7D2
+R1
+!s105 teste_arbitrator_sv_unit
+S1
+R2
+w1550135076
+8C:/problema3/Verilog/teste_arbitrator.sv
+FC:/problema3/Verilog/teste_arbitrator.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/problema3/Verilog/teste_arbitrator.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/problema3/Verilog/teste_arbitrator.sv|
+!i113 1
+o-work work -sv
+R7
+vtransmitter
+!s110 1550135523
+!i10b 1
+!s100 <H]G8UGU>CQkW;H8T4EFG2
+ILSoBPWd`W`2N=L@42M<7A2
+R1
+R2
+w1549703237
+8C:/problema3/Verilog/transmitter.v
+FC:/problema3/Verilog/transmitter.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1550135523.000000
+!s107 C:/problema3/Verilog/transmitter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/problema3/Verilog/transmitter.v|
+!i113 1
+R6
+R7
+vuart
+R0
+!i10b 1
+!s100 [^EIZDZaRHU@90`he0O<b3
+IbUf>7mQf[m:SfekPLY8``0
+R1
+R2
+w1549703194
+8C:/problema3/Verilog/uart.v
+FC:/problema3/Verilog/uart.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/problema3/Verilog/uart.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/problema3/Verilog/uart.v|
+!i113 1
+R6
+R7

@@ -12,8 +12,8 @@ module arbitrator( clock, resetn, writedata, readdata, read, write, chip_select,
  parameter RECOVERY_STATE	= 3'b100;
 
  reg [15:0] temp; //guarda o que foi recebido antes de verificar o CRC
- output reg [2:0] state = SEND_STATE;
- reg [2:0] select_sensor = 3'b1; //contador que seleciona o sensor
+ output reg [2:0] state;
+ reg [2:0] select_sensor; //contador que seleciona o sensor
  reg [7:0] send_reg; //registradores para envio e recebimento da uart
  wire [7:0] receive_reg;
  reg [31:0] readd;
@@ -22,8 +22,18 @@ module arbitrator( clock, resetn, writedata, readdata, read, write, chip_select,
  wire wr_en; // controle da escrita na uart
  wire ck_crc, ck_alarme; //controle crc
  wire tx_busy;
+ wire rxclk_en;
+ reg [4:0] time_out;
 
- uart uart_instance(.din(send_reg), .wr_en(wr_en), .clk_50m(clock), .tx(tx), .tx_busy(tx_busy), .rx(rx), .rdy(rdy), .rdy_clr(rdy_clr), .dout(receive_reg));
+
+initial begin
+	state = SEND_STATE;
+	select_sensor = 3'b1;
+	time_out = 5'b0;
+end
+
+
+ uart uart_instance(.din(send_reg), .wr_en(wr_en), .clk_50m(clock), .tx(tx), .tx_busy(tx_busy), .rx(rx), .rdy(rdy), .rdy_clr(rdy_clr), .dout(receive_reg), .rxclk_en(rxclk_en));
 
  check_CRC check_CRC_instance(.ck_crc(ck_crc), .ck_alarme(ck_alarme), .dado(temp[7:0]), .crc(temp[15:8]), .newcrc());
 
@@ -31,8 +41,10 @@ module arbitrator( clock, resetn, writedata, readdata, read, write, chip_select,
  assign wr_en = (state == SEND_STATE);
 
 always@(posedge clock or negedge resetn) begin
- if (~resetn) //reset da maquina
-  state <= SEND_STATE; 
+ if (~resetn) begin//reset da maquina
+  state <= SEND_STATE;
+  time_out <= 5'b0; 
+ end 
  else
  begin
  	case (state)
@@ -46,23 +58,35 @@ always@(posedge clock or negedge resetn) begin
 		end
 		RECEIVE_DATA_STATE: begin
 			if(rdy) begin //leitura concluida
+				time_out <= 5'b0; 
 				temp[7:0] <= receive_reg[7:0];
 				rdy_clr <= 1'b1;
 				state <= RECEIVE_CRC_STATE;
 			end
 			else begin 
-				//time out
+				if(rxclk_en)
+					time_out <= time_out + 5'b1;
+				if(time_out == 31) begin
+					time_out <= 5'b0;
+					state <= SEND_STATE;
+				end
 			end
 		end
 		RECEIVE_CRC_STATE: begin
 			rdy_clr <= 0;
 			if(rdy) begin //leitura concluida
+				time_out <= 5'b0; 
 				temp[15:8] <= receive_reg[7:0];
 				rdy_clr <= 1'b1;
 				state <= CHECK_CRC_STATE;
 			end
 			else begin
-				//time out
+				if(rxclk_en)
+					time_out <= time_out + 5'b1;
+				if(time_out == 31) begin
+					time_out <= 5'b0;
+					state <= SEND_STATE;
+				end
 			end
 		end
 		CHECK_CRC_STATE: begin

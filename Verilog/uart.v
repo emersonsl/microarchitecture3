@@ -1,3 +1,5 @@
+/* codigo extraido do repositorio https://github.com/jamieiles/uart*/
+
 module uart(input wire [7:0] din,
 	    input wire wr_en,
 	    input wire clk_50m,
@@ -6,9 +8,9 @@ module uart(input wire [7:0] din,
 	    input wire rx,
 	    output wire rdy,
 	    input wire rdy_clr,
-	    output wire [7:0] dout);
+	    output wire [7:0] dout, output wire rxclk_en);
 
-wire rxclk_en, txclk_en;
+wire txclk_en;
 
 baud_rate_gen uart_baud(.clk_50m(clk_50m),
 			.rxclk_en(rxclk_en),
