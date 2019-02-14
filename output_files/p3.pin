@@ -74,10 +74,10 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 3         :        :                   :      
 GND                          : 4         : gnd    :                   :         :           :                
 VCCINT                       : 5         : power  :                   : 1.2V    :           :                
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 6         : input  : 2.5 V             :         : 1         : N              
-my_register_slave_interface_0_conduit_end_readdata[28] : 7         : output : 2.5 V             :         : 1         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 7         :        :                   :         : 1         :                
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 8         : input  : 2.5 V             :         : 1         : N              
 nSTATUS                      : 9         :        :                   :         : 1         :                
-my_register_slave_interface_0_conduit_end_readdata[17] : 10        : output : 2.5 V             :         : 1         : N              
+esp_txd                      : 10        : output : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 11        :        :                   :         : 1         :                
 ~ALTERA_DCLK~                : 12        : output : 2.5 V             :         : 1         : N              
 ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 13        : input  : 2.5 V             :         : 1         : N              
@@ -91,14 +91,14 @@ altera_reserved_tdo          : 20        : output : 2.5 V             :         
 nCE                          : 21        :        :                   :         : 1         :                
 GND                          : 22        : gnd    :                   :         :           :                
 clk_clk                      : 23        : input  : 2.5 V             :         : 1         : N              
-GND+                         : 24        :        :                   :         : 2         :                
-GND+                         : 25        :        :                   :         : 2         :                
+arbitrator_0_rx_beginbursttransfer : 24        : input  : 2.5 V             :         : 2         : N              
+input_export[0]              : 25        : input  : 2.5 V             :         : 2         : N              
 VCCIO2                       : 26        : power  :                   : 2.5V    : 2         :                
 GND                          : 27        : gnd    :                   :         :           :                
-my_register_slave_interface_0_conduit_end_readdata[16] : 28        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 28        :        :                   :         : 2         :                
 VCCINT                       : 29        : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 30        :        :                   :         : 2         :                
-my_register_slave_interface_0_conduit_end_readdata[21] : 31        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 31        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 32        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 33        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 34        :        :                   :         : 2         :                
@@ -113,27 +113,27 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 42        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 43        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 44        :        :                   :         : 3         :                
 VCCINT                       : 45        : power  :                   : 1.2V    :           :                
-my_register_slave_interface_0_conduit_end_readdata[19] : 46        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 46        :        :                   :         : 3         :                
 VCCIO3                       : 47        : power  :                   : 2.5V    : 3         :                
 GND                          : 48        : gnd    :                   :         :           :                
-my_register_slave_interface_0_conduit_end_readdata[18] : 49        : output : 2.5 V             :         : 3         : N              
-my_register_slave_interface_0_conduit_end_readdata[20] : 50        : output : 2.5 V             :         : 3         : N              
-my_register_slave_interface_0_conduit_end_readdata[22] : 51        : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 52        :        :                   :         : 3         :                
-my_register_slave_interface_0_conduit_end_readdata[5] : 53        : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 54        :        :                   :         : 4         :                
-my_register_slave_interface_0_conduit_end_readdata[1] : 55        : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 49        :        :                   :         : 3         :                
+lcd_ON                       : 50        : output : 2.5 V             :         : 3         : N              
+lcd_BLON                     : 51        : output : 2.5 V             :         : 3         : N              
+lcd_EN                       : 52        : output : 2.5 V             :         : 3         : N              
+lcd_DATA[6]                  : 53        : bidir  : 2.5 V             :         : 3         : N              
+lcd_DATA[1]                  : 54        : bidir  : 2.5 V             :         : 4         : N              
+lcd_DATA[7]                  : 55        : bidir  : 2.5 V             :         : 4         : N              
 VCCIO4                       : 56        : power  :                   : 2.5V    : 4         :                
 GND                          : 57        : gnd    :                   :         :           :                
-uart_0_txd                   : 58        : output : 2.5 V             :         : 4         : N              
-my_register_slave_interface_0_conduit_end_readdata[8] : 59        : output : 2.5 V             :         : 4         : N              
-my_register_slave_interface_0_conduit_end_readdata[9] : 60        : output : 2.5 V             :         : 4         : N              
+lcd_RW                       : 58        : output : 2.5 V             :         : 4         : N              
+lcd_DATA[5]                  : 59        : bidir  : 2.5 V             :         : 4         : N              
+lcd_DATA[0]                  : 60        : bidir  : 2.5 V             :         : 4         : N              
 VCCINT                       : 61        : power  :                   : 1.2V    :           :                
 VCCIO4                       : 62        : power  :                   : 2.5V    : 4         :                
 GND                          : 63        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 64        :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 65        :        :                   :         : 4         :                
-uart_0_rxd                   : 66        : input  : 2.5 V             :         : 4         : N              
+lcd_DATA[3]                  : 64        : bidir  : 2.5 V             :         : 4         : N              
+lcd_DATA[4]                  : 65        : bidir  : 2.5 V             :         : 4         : N              
+lcd_DATA[2]                  : 66        : bidir  : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : 67        :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 68        :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 69        :        :                   :         : 4         :                
@@ -150,11 +150,11 @@ GND                          : 79        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : 80        :        :                   :         : 5         :                
 VCCIO5                       : 81        : power  :                   : 2.5V    : 5         :                
 GND                          : 82        : gnd    :                   :         :           :                
-my_register_slave_interface_0_conduit_end_readdata[0] : 83        : output : 2.5 V             :         : 5         : N              
-my_register_slave_interface_0_conduit_end_readdata[2] : 84        : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 83        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 84        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 85        :        :                   :         : 5         :                
-my_register_slave_interface_0_conduit_end_readdata[6] : 86        : output : 2.5 V             :         : 5         : N              
-my_register_slave_interface_0_conduit_end_readdata[7] : 87        : output : 2.5 V             :         : 5         : N              
+lcd_RS                       : 86        : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 87        :        :                   :         : 5         :                
 GND+                         : 88        :        :                   :         : 5         :                
 GND+                         : 89        :        :                   :         : 5         :                
 GND+                         : 90        :        :                   :         : 6         :                
@@ -167,7 +167,7 @@ MSEL1                        : 96        :        :                   :         
 MSEL2                        : 97        :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 98        :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 99        :        :                   :         : 6         :                
-my_register_slave_interface_0_conduit_end_readdata[13] : 100       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 100       :        :                   :         : 6         :                
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : 101       : output : 2.5 V             :         : 6         : N              
 VCCINT                       : 102       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 103       :        :                   :         : 6         :                
@@ -186,30 +186,30 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 115       :        :                   :      
 VCCINT                       : 116       : power  :                   : 1.2V    :           :                
 VCCIO7                       : 117       : power  :                   : 2.5V    : 7         :                
 GND                          : 118       : gnd    :                   :         :           :                
-my_register_slave_interface_0_conduit_end_readdata[10] : 119       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 119       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 120       :        :                   :         : 7         :                
-my_register_slave_interface_0_conduit_end_readdata[3] : 121       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 121       :        :                   :         : 7         :                
 VCCIO7                       : 122       : power  :                   : 2.5V    : 7         :                
 GND                          : 123       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 124       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 125       :        :                   :         : 7         :                
-my_register_slave_interface_0_conduit_end_readdata[4] : 126       : output : 2.5 V             :         : 7         : N              
-my_register_slave_interface_0_conduit_end_readdata[14] : 127       : output : 2.5 V             :         : 7         : N              
-my_register_slave_interface_0_conduit_end_readdata[12] : 128       : output : 2.5 V             :         : 8         : N              
-my_register_slave_interface_0_conduit_end_readdata[29] : 129       : output : 2.5 V             :         : 8         : N              
+esp_rxd                      : 126       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 127       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 128       :        :                   :         : 8         :                
+output_export[2]             : 129       : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : 130       : power  :                   : 2.5V    : 8         :                
 GND                          : 131       : gnd    :                   :         :           :                
-my_register_slave_interface_0_conduit_end_readdata[11] : 132       : output : 2.5 V             :         : 8         : N              
-my_register_slave_interface_0_conduit_end_readdata[23] : 133       : output : 2.5 V             :         : 8         : N              
+input_export[3]              : 132       : input  : 2.5 V             :         : 8         : N              
+output_export[1]             : 133       : output : 2.5 V             :         : 8         : N              
 VCCINT                       : 134       : power  :                   : 1.2V    :           :                
-my_register_slave_interface_0_conduit_end_readdata[26] : 135       : output : 2.5 V             :         : 8         : N              
-my_register_slave_interface_0_conduit_end_readdata[31] : 136       : output : 2.5 V             :         : 8         : N              
-my_register_slave_interface_0_conduit_end_readdata[25] : 137       : output : 2.5 V             :         : 8         : N              
-my_register_slave_interface_0_conduit_end_readdata[27] : 138       : output : 2.5 V             :         : 8         : N              
+input_export[1]              : 135       : input  : 2.5 V             :         : 8         : N              
+input_export[2]              : 136       : input  : 2.5 V             :         : 8         : N              
+arbitrator_0_tx_writeresponsevalid_n : 137       : output : 2.5 V             :         : 8         : N              
+output_export[0]             : 138       : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : 139       : power  :                   : 2.5V    : 8         :                
 GND                          : 140       : gnd    :                   :         :           :                
-my_register_slave_interface_0_conduit_end_readdata[24] : 141       : output : 2.5 V             :         : 8         : N              
-my_register_slave_interface_0_conduit_end_readdata[30] : 142       : output : 2.5 V             :         : 8         : N              
+output_export[3]             : 141       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 142       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 143       :        :                   :         : 8         :                
-my_register_slave_interface_0_conduit_end_readdata[15] : 144       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 144       :        :                   :         : 8         :                
 GND                          : EPAD      :        :                   :         :           :                

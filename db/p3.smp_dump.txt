@@ -7,3 +7,41 @@ DRsize.010 0 0 0 1 0 1
 DRsize.011 0 0 1 0 0 1 
 DRsize.100 0 1 0 0 0 1 
 DRsize.101 1 0 0 0 0 1 
+
+State Machine - |processor|processor_character_lcd_0:character_lcd_0|s_lcd_controller
+Name s_lcd_controller.LCD_STATE_6_COMPLETE s_lcd_controller.LCD_STATE_5_TRANSFER s_lcd_controller.LCD_STATE_4_BEGIN_TRANSFER s_lcd_controller.LCD_STATE_3_CHECK_BUSY s_lcd_controller.LCD_STATE_2_START_CHECK_BUSY s_lcd_controller.LCD_STATE_1_INITIALIZE s_lcd_controller.LCD_STATE_0_IDLE 
+s_lcd_controller.LCD_STATE_0_IDLE 0 0 0 0 0 0 0 
+s_lcd_controller.LCD_STATE_1_INITIALIZE 0 0 0 0 0 1 1 
+s_lcd_controller.LCD_STATE_2_START_CHECK_BUSY 0 0 0 0 1 0 1 
+s_lcd_controller.LCD_STATE_3_CHECK_BUSY 0 0 0 1 0 0 1 
+s_lcd_controller.LCD_STATE_4_BEGIN_TRANSFER 0 0 1 0 0 0 1 
+s_lcd_controller.LCD_STATE_5_TRANSFER 0 1 0 0 0 0 1 
+s_lcd_controller.LCD_STATE_6_COMPLETE 1 0 0 0 0 0 1 
+
+State Machine - |processor|processor_character_lcd_0:character_lcd_0|altera_up_character_lcd_initialization:Char_LCD_Init|s_lcd_initialize
+Name s_lcd_initialize.LCD_INIT_STATE_3_DONE s_lcd_initialize.LCD_INIT_STATE_2_CHECK_DONE s_lcd_initialize.LCD_INIT_STATE_1_SEND_COMMAND s_lcd_initialize.LCD_INIT_STATE_0_WAIT_POWER_UP 
+s_lcd_initialize.LCD_INIT_STATE_0_WAIT_POWER_UP 0 0 0 0 
+s_lcd_initialize.LCD_INIT_STATE_1_SEND_COMMAND 0 0 1 1 
+s_lcd_initialize.LCD_INIT_STATE_2_CHECK_DONE 0 1 0 1 
+s_lcd_initialize.LCD_INIT_STATE_3_DONE 1 0 0 1 
+
+State Machine - |processor|processor_character_lcd_0:character_lcd_0|altera_up_character_lcd_communication:Char_LCD_Comm|s_lcd
+Name s_lcd.LCD_STATE_0_OPERATION s_lcd.LCD_STATE_3_END s_lcd.LCD_STATE_2_HOLD s_lcd.LCD_STATE_1_ENABLE s_lcd.LCD_STATE_4_IDLE 
+s_lcd.LCD_STATE_4_IDLE 0 0 0 0 0 
+s_lcd.LCD_STATE_1_ENABLE 0 0 0 1 1 
+s_lcd.LCD_STATE_2_HOLD 0 0 1 0 1 
+s_lcd.LCD_STATE_3_END 0 1 0 0 1 
+s_lcd.LCD_STATE_0_OPERATION 1 0 0 0 1 
+
+State Machine - |processor|arbitrator:arbitrator_0|uart:uart_instance|receiver:uart_rx|state
+Name state.RX_STATE_START state.RX_STATE_STOP state.RX_STATE_DATA 
+state.RX_STATE_START 0 0 0 
+state.RX_STATE_DATA 1 0 1 
+state.RX_STATE_STOP 1 1 0 
+
+State Machine - |processor|arbitrator:arbitrator_0|uart:uart_instance|transmitter:uart_tx|state
+Name state.STATE_STOP state.STATE_DATA state.STATE_START state.STATE_IDLE 
+state.STATE_IDLE 0 0 0 0 
+state.STATE_START 0 0 1 1 
+state.STATE_DATA 0 1 0 1 
+state.STATE_STOP 1 0 0 1 

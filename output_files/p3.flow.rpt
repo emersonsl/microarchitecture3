@@ -1,5 +1,5 @@
 Flow report for p3
-Thu Feb 07 17:17:21 2019
+Thu Feb 14 10:29:46 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Feb 07 17:17:07 2019       ;
+; Flow Status                        ; Successful - Thu Feb 14 10:29:38 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; p3                                          ;
 ; Top-level Entity Name              ; processor                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,950 / 6,272 ( 31 % )                      ;
-;     Total combinational functions  ; 1,801 / 6,272 ( 29 % )                      ;
-;     Dedicated logic registers      ; 1,071 / 6,272 ( 17 % )                      ;
-; Total registers                    ; 1071                                        ;
-; Total pins                         ; 35 / 92 ( 38 % )                            ;
+; Total logic elements               ; 2,157 / 6,272 ( 34 % )                      ;
+;     Total combinational functions  ; 1,995 / 6,272 ( 32 % )                      ;
+;     Dedicated logic registers      ; 1,200 / 6,272 ( 19 % )                      ;
+; Total registers                    ; 1200                                        ;
+; Total pins                         ; 26 / 92 ( 28 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 76,800 / 276,480 ( 28 % )                   ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/07/2019 17:14:54 ;
+; Start date & time ; 02/14/2019 10:27:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; p3                  ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                       ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 88750185370164.154957049309788                              ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 88750185370164.155015087211656                              ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                          ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                           ; --            ; --          ; --         ;
 ; MISC_FILE                           ; processor/synthesis/../processor.cmp                        ; --            ; --          ; --         ;
@@ -89,7 +89,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                ; --            ; --          ; --         ;
 ; SLD_FILE                            ; processor/synthesis/processor.regmap                        ; --            ; --          ; --         ;
 ; SLD_FILE                            ; processor/synthesis/processor.debuginfo                     ; --            ; --          ; --         ;
-; SLD_INFO                            ; QSYS_NAME processor HAS_SOPCINFO 1 GENERATION_ID 1549570214 ; --            ; processor   ; --         ;
+; SLD_INFO                            ; QSYS_NAME processor HAS_SOPCINFO 1 GENERATION_ID 1550150764 ; --            ; processor   ; --         ;
 ; SOPCINFO_FILE                       ; processor/synthesis/../../processor.sopcinfo                ; --            ; --          ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                          ; --            ; --          ; --         ;
 ; TOP_LEVEL_ENTITY                    ; processor                                                   ; p3            ; --          ; --         ;
@@ -101,11 +101,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:33     ; 1.0                     ; 4904 MB             ; 00:02:28                           ;
-; Fitter               ; 00:00:22     ; 1.1                     ; 5270 MB             ; 00:00:24                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4699 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:11     ; 1.1                     ; 4771 MB             ; 00:00:09                           ;
-; Total                ; 00:02:11     ; --                      ; --                  ; 00:03:05                           ;
+; Analysis & Synthesis ; 00:01:15     ; 1.0                     ; 4926 MB             ; 00:02:00                           ;
+; Fitter               ; 00:00:17     ; 1.1                     ; 5284 MB             ; 00:00:20                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4699 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.1                     ; 4776 MB             ; 00:00:07                           ;
+; Total                ; 00:01:42     ; --                      ; --                  ; 00:02:30                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

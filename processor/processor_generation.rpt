@@ -2,23 +2,30 @@ Info: Starting: Create block symbol file (.bsf)
 Info: qsys-generate C:\problema3\processor.qsys --block-symbol-file --output-directory=C:\problema3\processor --family="Cyclone IV E" --part=EP4CE6E22C8
 Progress: Loading problema3/processor.qsys
 Progress: Reading input file
+Progress: Adding INPUT [altera_avalon_pio 18.1]
+Progress: Parameterizing module INPUT
+Progress: Adding OUTPUT [altera_avalon_pio 18.1]
+Progress: Parameterizing module OUTPUT
+Progress: Adding arbitrator_0 [arbitrator 1.0]
+Progress: Parameterizing module arbitrator_0
+Progress: Adding character_lcd_0 [altera_up_avalon_character_lcd 18.0]
+Progress: Parameterizing module character_lcd_0
 Progress: Adding clk_0 [clock_source 18.1]
 Progress: Parameterizing module clk_0
-Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
-Progress: Parameterizing module jtag_uart_0
-Progress: Adding my_register_slave_interface_0 [my_register_slave_interface 1.0]
-Progress: Parameterizing module my_register_slave_interface_0
+Progress: Adding esp [altera_avalon_uart 18.1]
+Progress: Parameterizing module esp
+Progress: Adding jtag [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag
 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
 Progress: Parameterizing module nios2_gen2_0
 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
 Progress: Parameterizing module onchip_memory2_0
-Progress: Adding uart_0 [altera_avalon_uart 18.1]
-Progress: Parameterizing module uart_0
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Info: processor.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: processor.INPUT: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: processor.jtag: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
@@ -26,76 +33,111 @@ Info: Starting: Create HDL design files for synthesis
 Info: qsys-generate C:\problema3\processor.qsys --synthesis=VERILOG --output-directory=C:\problema3\processor\synthesis --family="Cyclone IV E" --part=EP4CE6E22C8
 Progress: Loading problema3/processor.qsys
 Progress: Reading input file
+Progress: Adding INPUT [altera_avalon_pio 18.1]
+Progress: Parameterizing module INPUT
+Progress: Adding OUTPUT [altera_avalon_pio 18.1]
+Progress: Parameterizing module OUTPUT
+Progress: Adding arbitrator_0 [arbitrator 1.0]
+Progress: Parameterizing module arbitrator_0
+Progress: Adding character_lcd_0 [altera_up_avalon_character_lcd 18.0]
+Progress: Parameterizing module character_lcd_0
 Progress: Adding clk_0 [clock_source 18.1]
 Progress: Parameterizing module clk_0
-Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
-Progress: Parameterizing module jtag_uart_0
-Progress: Adding my_register_slave_interface_0 [my_register_slave_interface 1.0]
-Progress: Parameterizing module my_register_slave_interface_0
+Progress: Adding esp [altera_avalon_uart 18.1]
+Progress: Parameterizing module esp
+Progress: Adding jtag [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag
 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
 Progress: Parameterizing module nios2_gen2_0
 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
 Progress: Parameterizing module onchip_memory2_0
-Progress: Adding uart_0 [altera_avalon_uart 18.1]
-Progress: Parameterizing module uart_0
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Info: processor.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: processor.INPUT: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: processor.jtag: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: processor: Generating processor "processor" for QUARTUS_SYNTH
-Info: jtag_uart_0: Starting RTL generation for module 'processor_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=processor_jtag_uart_0 --dir=C:/Users/Emerson/AppData/Local/Temp/alt7934_2619741807748813150.dir/0002_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Emerson/AppData/Local/Temp/alt7934_2619741807748813150.dir/0002_jtag_uart_0_gen//processor_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
-Info: jtag_uart_0: Done RTL generation for module 'processor_jtag_uart_0'
-Info: jtag_uart_0: "processor" instantiated altera_avalon_jtag_uart "jtag_uart_0"
-Info: my_register_slave_interface_0: "processor" instantiated my_register_slave_interface "my_register_slave_interface_0"
+Info: INPUT: Starting RTL generation for module 'processor_INPUT'
+Info: INPUT:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=processor_INPUT --dir=C:/Users/Emerson/AppData/Local/Temp/alt7941_5624822979413826683.dir/0002_INPUT_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Emerson/AppData/Local/Temp/alt7941_5624822979413826683.dir/0002_INPUT_gen//processor_INPUT_component_configuration.pl  --do_build_sim=0  ]
+Info: INPUT: Done RTL generation for module 'processor_INPUT'
+Info: INPUT: "processor" instantiated altera_avalon_pio "INPUT"
+Info: OUTPUT: Starting RTL generation for module 'processor_OUTPUT'
+Info: OUTPUT:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=processor_OUTPUT --dir=C:/Users/Emerson/AppData/Local/Temp/alt7941_5624822979413826683.dir/0003_OUTPUT_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Emerson/AppData/Local/Temp/alt7941_5624822979413826683.dir/0003_OUTPUT_gen//processor_OUTPUT_component_configuration.pl  --do_build_sim=0  ]
+Info: OUTPUT: Done RTL generation for module 'processor_OUTPUT'
+Info: OUTPUT: "processor" instantiated altera_avalon_pio "OUTPUT"
+Info: arbitrator_0: "processor" instantiated arbitrator "arbitrator_0"
+Info: character_lcd_0: Starting Generation of Character LCD
+Info: character_lcd_0: "processor" instantiated altera_up_avalon_character_lcd "character_lcd_0"
+Info: esp: Starting RTL generation for module 'processor_esp'
+Info: esp:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart/generate_rtl.pl --name=processor_esp --dir=C:/Users/Emerson/AppData/Local/Temp/alt7941_5624822979413826683.dir/0006_esp_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Emerson/AppData/Local/Temp/alt7941_5624822979413826683.dir/0006_esp_gen//processor_esp_component_configuration.pl  --do_build_sim=0  ]
+Info: esp: Done RTL generation for module 'processor_esp'
+Info: esp: "processor" instantiated altera_avalon_uart "esp"
+Info: jtag: Starting RTL generation for module 'processor_jtag'
+Info: jtag:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=processor_jtag --dir=C:/Users/Emerson/AppData/Local/Temp/alt7941_5624822979413826683.dir/0007_jtag_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Emerson/AppData/Local/Temp/alt7941_5624822979413826683.dir/0007_jtag_gen//processor_jtag_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag: Done RTL generation for module 'processor_jtag'
+Info: jtag: "processor" instantiated altera_avalon_jtag_uart "jtag"
 Info: nios2_gen2_0: "processor" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info: onchip_memory2_0: Starting RTL generation for module 'processor_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=processor_onchip_memory2_0 --dir=C:/Users/Emerson/AppData/Local/Temp/alt7934_2619741807748813150.dir/0004_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Emerson/AppData/Local/Temp/alt7934_2619741807748813150.dir/0004_onchip_memory2_0_gen//processor_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=processor_onchip_memory2_0 --dir=C:/Users/Emerson/AppData/Local/Temp/alt7941_5624822979413826683.dir/0008_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Emerson/AppData/Local/Temp/alt7941_5624822979413826683.dir/0008_onchip_memory2_0_gen//processor_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_memory2_0: Done RTL generation for module 'processor_onchip_memory2_0'
 Info: onchip_memory2_0: "processor" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
-Info: uart_0: Starting RTL generation for module 'processor_uart_0'
-Info: uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart/generate_rtl.pl --name=processor_uart_0 --dir=C:/Users/Emerson/AppData/Local/Temp/alt7934_2619741807748813150.dir/0005_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Emerson/AppData/Local/Temp/alt7934_2619741807748813150.dir/0005_uart_0_gen//processor_uart_0_component_configuration.pl  --do_build_sim=0  ]
-Info: uart_0: Done RTL generation for module 'processor_uart_0'
-Info: uart_0: "processor" instantiated altera_avalon_uart "uart_0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "processor" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "processor" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "processor" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'processor_nios2_gen2_0_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=processor_nios2_gen2_0_cpu --dir=C:/Users/Emerson/AppData/Local/Temp/alt7934_2619741807748813150.dir/0008_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/Emerson/AppData/Local/Temp/alt7934_2619741807748813150.dir/0008_cpu_gen//processor_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2019.02.07 17:10:58 (*) Starting Nios II generation
-Info: cpu: # 2019.02.07 17:10:58 (*)   Checking for plaintext license.
-Info: cpu: # 2019.02.07 17:11:01 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
-Info: cpu: # 2019.02.07 17:11:01 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2019.02.07 17:11:01 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2019.02.07 17:11:01 (*)   Plaintext license not found.
-Info: cpu: # 2019.02.07 17:11:01 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2019.02.07 17:11:01 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2019.02.07 17:11:01 (*)   Creating all objects for CPU
-Info: cpu: # 2019.02.07 17:11:04 (*)   Generating RTL from CPU objects
-Info: cpu: # 2019.02.07 17:11:04 (*)   Creating plain-text RTL
-Info: cpu: # 2019.02.07 17:11:05 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=processor_nios2_gen2_0_cpu --dir=C:/Users/Emerson/AppData/Local/Temp/alt7941_5624822979413826683.dir/0011_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/Emerson/AppData/Local/Temp/alt7941_5624822979413826683.dir/0011_cpu_gen//processor_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2019.02.14 10:26:51 (*) Starting Nios II generation
+Info: cpu: # 2019.02.14 10:26:51 (*)   Checking for plaintext license.
+Info: cpu: # 2019.02.14 10:26:52 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2019.02.14 10:26:52 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2019.02.14 10:26:52 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2019.02.14 10:26:52 (*)   Plaintext license not found.
+Info: cpu: # 2019.02.14 10:26:52 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2019.02.14 10:26:52 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2019.02.14 10:26:52 (*)   Creating all objects for CPU
+Info: cpu: # 2019.02.14 10:26:54 (*)   Generating RTL from CPU objects
+Info: cpu: # 2019.02.14 10:26:54 (*)   Creating plain-text RTL
+Info: cpu: # 2019.02.14 10:26:56 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'processor_nios2_gen2_0_cpu'
 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
-Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: jtag_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_avalon_jtag_slave_translator"
 Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
-Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
-Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: jtag_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_avalon_jtag_slave_agent"
+Info: jtag_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_avalon_jtag_slave_agent_rsp_fifo"
 Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: character_lcd_0_avalon_lcd_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "character_lcd_0_avalon_lcd_slave_burst_adapter"
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
+Info: Reusing file C:/problema3/processor/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
 Info: Reusing file C:/problema3/processor/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file C:/problema3/processor/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: character_lcd_0_avalon_lcd_slave_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "character_lcd_0_avalon_lcd_slave_rsp_width_adapter"
+Info: Reusing file C:/problema3/processor/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/problema3/processor/synthesis/submodules/altera_merlin_burst_uncompressor.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_001: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: processor: Done "processor" with 23 modules, 37 files
+Info: error_adapter_0: "avalon_st_adapter_001" instantiated error_adapter "error_adapter_0"
+Info: processor: Done "processor" with 37 modules, 66 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

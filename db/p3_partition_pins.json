@@ -4,135 +4,75 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[0]",
+					"name" : "arbitrator_0_tx_writeresponsevalid_n",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[1]",
+					"name" : "esp_txd",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[2]",
+					"name" : "lcd_ON",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[3]",
+					"name" : "lcd_BLON",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[4]",
+					"name" : "lcd_EN",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[5]",
+					"name" : "lcd_RW",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[6]",
+					"name" : "output_export[0]",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[7]",
+					"name" : "output_export[1]",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[8]",
+					"name" : "output_export[2]",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[9]",
+					"name" : "output_export[3]",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[10]",
+					"name" : "lcd_DATA[0]",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[11]",
+					"name" : "lcd_DATA[1]",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[12]",
+					"name" : "lcd_DATA[2]",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[13]",
+					"name" : "lcd_DATA[3]",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[14]",
+					"name" : "lcd_DATA[4]",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[15]",
+					"name" : "lcd_DATA[5]",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[16]",
+					"name" : "lcd_DATA[6]",
 					"strict" : false
 				},
 				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[17]",
-					"strict" : false
-				},
-				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[18]",
-					"strict" : false
-				},
-				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[19]",
-					"strict" : false
-				},
-				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[20]",
-					"strict" : false
-				},
-				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[21]",
-					"strict" : false
-				},
-				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[22]",
-					"strict" : false
-				},
-				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[23]",
-					"strict" : false
-				},
-				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[24]",
-					"strict" : false
-				},
-				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[25]",
-					"strict" : false
-				},
-				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[26]",
-					"strict" : false
-				},
-				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[27]",
-					"strict" : false
-				},
-				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[28]",
-					"strict" : false
-				},
-				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[29]",
-					"strict" : false
-				},
-				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[30]",
-					"strict" : false
-				},
-				{
-					"name" : "my_register_slave_interface_0_conduit_end_readdata[31]",
-					"strict" : false
-				},
-				{
-					"name" : "uart_0_txd",
+					"name" : "lcd_DATA[7]",
 					"strict" : false
 				},
 				{
@@ -140,7 +80,27 @@
 					"strict" : false
 				},
 				{
-					"name" : "uart_0_rxd",
+					"name" : "arbitrator_0_rx_beginbursttransfer",
+					"strict" : false
+				},
+				{
+					"name" : "input_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "input_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "input_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "input_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "esp_rxd",
 					"strict" : false
 				},
 				{
